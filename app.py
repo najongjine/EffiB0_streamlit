@@ -19,8 +19,8 @@ st.title("🐶🐱🐴 VGG16 이미지 분류기")
 # 모델 및 클래스 불러오기
 @st.cache_resource
 def load_model_and_labels():
-    model_path = hf_hub_download(repo_id="WildOjisan/vgg16_cat_dog_horse", filename="vgg16_cat_dog_horse_classi_smooth.h5")
-    label_path = hf_hub_download(repo_id="WildOjisan/vgg16_cat_dog_horse", filename="vgg16_cat_dog_horse_classi_labels_smooth.json")
+    model_path = hf_hub_download(repo_id="WildOjisan/EfficientNetB0_cornleaf", filename="EfficientNetB0_cornleaf.h5")
+    label_path = hf_hub_download(repo_id="WildOjisan/EfficientNetB0_cornleaf", filename="EfficientNetB0_cornleaf.json")
 
     model = load_model(model_path)
     with open(label_path, 'r') as f:
