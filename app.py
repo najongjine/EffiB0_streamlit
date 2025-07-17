@@ -14,7 +14,21 @@ import json
 from PIL import Image
 import io
 
-st.title("🐶🐱🐴 VGG16 이미지 분류기")
+st.title("Effi 이미지 분류기")
+st.write("""
+이 이미지 분류기는 
+         Bearded_Fireworm, 
+         Blue_Dragon_Sea Slug, 
+         Mata_Mata_Turtle, 
+         Pink_Fairy Armadillo 
+분류기에요
+""")
+st.image(
+    ["bearded_fireworm.png", "blue_dragon_sea_slug.jpg"
+     ,"matamata_turtle.png","pink_fairy_armadilo.png"],
+    caption=["고양이", "강아지"],
+    use_column_width=True
+)
 
 # 모델 및 클래스 불러오기
 @st.cache_resource
