@@ -69,7 +69,7 @@ if uploaded_file is not None:
     max_confidence=predictions[0]
     max_confidence=max(max_confidence)
     #max_confidence : 0.30538463592529297
-    if(max_confidence):
+    if(max_confidence<0.6):
         st.markdown(":( 학습한 클래스가 아니거나, 분류를 실패 했습니다")
     else:
         st.markdown(f"### ✅ 예측 결과: **{predicted_class}**")
