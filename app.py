@@ -35,8 +35,8 @@ st.image(
 # 모델 및 클래스 불러오기
 @st.cache_resource
 def load_model_and_labels():
-    model_path = hf_hub_download(repo_id="WildOjisan/EfficientNetB0_cornleaf", filename="EfficientNetB0_cornleaf.h5")
-    label_path = hf_hub_download(repo_id="WildOjisan/EfficientNetB0_cornleaf", filename="EfficientNetB0_cornleaf.json")
+    model_path = hf_hub_download(repo_id="WildOjisan/Effi_wierd_animals", filename="EffiB0_test.h5")
+    label_path = hf_hub_download(repo_id="WildOjisan/Effi_wierd_animals", filename="EffiB0_test.json")
 
     model = load_model(model_path)
     with open(label_path, 'r') as f:
