@@ -24,10 +24,12 @@ st.write("""
 분류기에요
 """)
 st.image(
-    ["bearded_fireworm.png", "blue_dragon_sea_slug.jpg"
+    ["bearded_fireworm.png", "blue_dragon_sea_slug.png"
      ,"matamata_turtle.png","pink_fairy_armadilo.png"],
-    caption=["고양이", "강아지"],
-    use_column_width=True
+    caption=["bearded_fireworm", "blue_dragon_sea_slug"
+             ,"matamata_turtle","pink_fairy_armadilo"],
+    #use_column_width=True
+    width=300
 )
 
 # 모델 및 클래스 불러오기
