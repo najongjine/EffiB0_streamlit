@@ -1,5 +1,5 @@
 streamlit
-tensorflow
-pillow
+tensorflow==2.14.0  # 또는 Colab에서 사용한 버전 확인 후 동일하게
+numpy
 matplotlib
-huggingface_hub
+Pillow
