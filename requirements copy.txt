@@ -1,5 +1,0 @@
-streamlit
-tensorflow
-pillow
-matplotlib
-huggingface_hub

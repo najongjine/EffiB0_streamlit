@@ -1,0 +1,8 @@
+torch
+torchvision
+pillow
+matplotlib
+tqdm
+numpy
+streamlit
+pandas
