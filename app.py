@@ -35,11 +35,8 @@ st.image(
 # 모델 및 클래스 불러오기
 @st.cache_resource
 def load_model_and_labels():
-    model_path = hf_hub_download(repo_id="WildOjisan/Effi_wierd_animals", filename="EffiB0_test.h5")
-    label_path = hf_hub_download(repo_id="WildOjisan/Effi_wierd_animals", filename="EffiB0_test.json")
-
-    model = load_model(model_path)
-    with open(label_path, 'r') as f:
+    model = load_model("EffiB0_test.h5")
+    with open("EffiB0_test.json", "r") as f:
         class_names = json.load(f)
     return model, class_names
 
@@ -70,7 +67,7 @@ if uploaded_file is not None:
     max_confidence=max(max_confidence)
     #max_confidence : 0.30538463592529297
     if(max_confidence<0.6):
-        st.markdown(":( 학습한 클래스가 아니거나, 분류를 실패 했습니다")
+        st.markdown("## :( 학습한 클래스가 아니거나, 분류를 실패 했습니다")
     else:
         st.markdown(f"### ✅ 예측 결과: **{predicted_class}**")
         st.markdown("### 🔢 클래스별 확률")
